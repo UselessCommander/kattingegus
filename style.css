@@ -1,0 +1,1593 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: #153242;
+  --base: #EAE4D7;
+  --minegray: rgba(21, 50, 66, 0.5); /* #153242 med 50% opacity */
+}
+
+
+
+/* LANDINGPAGE CSS  */
+.landingpage-section-one{
+/* background-color: red; */
+
+display: flex;
+background-size: cover;
+color: white;
+padding: 16px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.info-box{
+    background-image: url("/img/3.png");
+    background-size: cover;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: 42px;
+    border-radius: 5px;
+  }
+  .stone{
+    width: 30px;
+  }
+  .info-box ul{
+    list-style-type: none;
+    font-family: "work sans";
+    font-size: 12px;
+   
+
+  }
+  .info-box ul li{
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+  .info-box ul li .fa-solid{
+    margin-top: 8px;
+    padding-right: 8px;
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+
+  /* BULLETLIST   */
+
+
+.landing-page-section-two{
+/* padding: 16px;   */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.section-two-landingpage{
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  
+
+}
+.section-two-landingpage article{
+display: flex;
+flex-direction: column;
+/* background-color: blue; */
+width: 50%;
+text-align: left;
+
+
+}
+
+.section-two-landingpage article h2{
+  font-weight: 100;
+  color: var(--blue);
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.medbring-selv-article p{
+font-family: 'work sans';
+font-size: 16px;
+height: 100%;
+}
+
+.bullet-list article ul{
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px
+ 
+}
+.bullet-list ul li{
+  display: flex;
+  font-family: 'work sans';
+  width: 100%;
+  /* background-color: red; */
+    width: 132px;
+    height: 50px;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+
+  
+}
+.bullet-list ul img{
+  /* position: absolute; */
+  width: 20px;
+margin-right: 10px;
+
+}
+.bullet-list ul .fa-solid{
+  position: relative;
+  color: var(--blue);
+    font-size: 32px;
+
+
+
+    display: none;
+}
+
+
+/* BULLET LIST END */
+
+
+/* RENTING */
+.renting{
+margin-bottom: 16px;
+margin-top: 16px;}
+
+/* RENTING END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* items */
+#items{
+  display: flex;
+  grid-template-columns: 33% 33% 33%; 
+  gap:0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+
+
+padding-bottom: 32px;
+
+}
+
+.item{
+  width: 115px;
+  height: 229px;
+  padding:0;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  overflow: hidden;
+  
+}
+
+.item>img
+{
+  width:100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.item>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:absolute;
+  color:white;
+
+}
+
+.item>.prices{
+padding: 8px;
+font-size: 12px;
+font-family: "Lora", serif;
+font-weight: 100;
+}
+.item h3{
+  color:white;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 100;
+  margin-bottom: 16px;
+  font-family: "Lora", serif;
+
+  
+
+}
+
+/* ITEMS END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*STEP-BYSTEP-BAR*/
+ .landing-page-section-two{
+  background-color: white;;
+  padding: 32px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+ }
+.progress-container{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center
+
+
+}
+/* dette er min html klasse. til den tilføjer jeg et element før:before og et efter:after */
+.step { 
+  position: relative; /* For at absolut positionerede pseudo-elementer placeres i forhold til .step */
+  font-family: 'Work Sans', sans-serif;
+  color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+  width:80px;
+
+  counter-increment: stepNummerRoshni; /*aner ik hvorfor lortetikk eu*/
+
+}
+.step.active{
+  color:#979797;
+  
+}
+
+/* element før html */
+.step::before {
+  content: counter(stepNummerRoshni); /*Den viser det counter-increment med navnet stepNummerRoshni */
+  color:white;
+  width: 30px;
+  height: 30px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px; /* Jeg  cirklen op over boksen */
+  left: 50%;
+  transform: translateX(-50%); /*Jeg  centrerer de blå dutter horisontalt */
+
+ /*HER centerer jeg counter nummer som jeg afspiller*/
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  z-index: 1;
+
+
+
+}
+
+
+
+/* element efter html  */
+.step::after {
+  content: "";
+  height: 2px;
+  width: 70px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: -15px; /*Læg mæke til at denne er halv så meget fra toppen som de blå, (fordi det skal være i midten)*/ 
+  left: -50%; /* Den orange linjhe bliver flyttet 50% til venstre fra den orgianle plads,*/
+}
+
+/* Fjern stregen fra første step */
+.step:first-child::after {
+  display: none;
+}
+
+
+/* *ACTIVE */
+.step.active::before{
+  background: var(--blue);
+  color:white;
+  opacity: 100%;
+
+}
+
+/*STEP-BYSTEP-BAR END*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* CALENDER */
+
+.section-two-article{
+  background-color: ;
+  width: 100%;
+ display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-top: 8px;
+
+
+}
+
+input[type="radio"] {
+  display: none; /* Jeg skjuler den normale knap(den grimme) */
+}
+
+table {
+  gap: 16px; /* Mellemrum mellem bokse */
+  justify-content: center;
+  padding: 16px;
+  align-items: center;
+  
+}
+
+fieldset label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: #D9D9D9;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"]:checked + label {
+  background-color: darkblue;
+  font-weight: bold;
+}
+
+.section-two-article {
+  background-color: yllow;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  display: none; /* Skjuler grim knap(standard-knap) */
+}
+
+.choose-time {
+  display: grid;
+  gap: 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset legend {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+fieldset label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--blue);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+height: 70px;
+width: 65px;
+margin: px;
+}
+fieldset label.taken {
+opacity: 50%;
+}
+.dates td{
+  font-size: 12px;
+  font-family: 'Work Sans', sans-serif;
+  color:#153242
+}
+.days td{
+  font-size: 24px;
+  font-family: 'Lora', serif;
+  color: #153242;
+  opacity: 50%;
+  font
+}
+
+input[type="radio"]:checked + label {
+  background-color: darkblue;
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: 0.2s ease;
+  display: flex;
+}
+
+
+
+
+
+.number-of-persons{
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+padding-left: 16px;
+}
+
+
+.custom-select-wrapper {
+  position: relative;
+  width: 250px; 
+}
+
+.custom-select {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: var(--blue);
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+
+.custom-select:focus {
+  outline: none;
+}
+
+.icon-left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.icon-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.custom-select option {
+  background: white;
+  color: #4D4C4C;
+  
+  width: 300px;
+  z-index: 0;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+
+.submit{
+  width: 350px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  margin-top: 16px;
+  border-radius: 5px;
+  border:none;
+background-color: var(--blue);
+  color:white;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  margin-top: 16px;
+
+}
+.submit:hover{
+  opacity: 10%;
+}
+.firstform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* CALENDER END */
+
+
+/* ABOUT-US-LANDIG-PAGE-SECTION */
+.aboutus{
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  background-color: var(--blue);
+  color:white;
+  align-items: cnter;
+  justify-content: cnter;
+}
+.aboutus p{
+  font-size: 12px;
+font-family: "Work", sans-serif;
+margin-top: 8px;
+}
+.aboutus article{
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+}
+.aboutus article:last-child{
+  position: relative;
+}
+.aboutus-img{
+  position: absolute;
+  right: -60%;
+  width: 150%;
+}
+
+
+
+
+
+
+/* LANDINGPAGEEND */
+
+
+
+
+
+
+
+
+/* HAANDKLEADER PAGE CSS-2 */
+.secondmain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+
+
+
+
+
+}
+
+#items-two{
+display: grid;
+grid-template-columns: 1fr;
+gap:1rem;
+padding: 1rem;
+padding-top: 32px;
+padding-bottom: 32px;
+}
+
+.item-two{
+  width: 100%;
+  padding: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 250px;
+  background-color: blue;
+  color:white;
+
+}
+.item-two:first-child
+{
+background-image: url("img/hat.png");
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+
+
+
+.item-two:last-child
+{
+background-image: url("img/towels.png");
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+.item-two>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  bottom:0;
+}
+
+
+.progress-container.two{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.fa-chevron-right {
+
+margin-left: 16px;
+}
+/*table-two-*/
+.delete{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:none;
+  background-color: transparent;
+  font-family: "work sans";
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+
+}
+
+.edit-number{
+  font-family: "work sans";
+  font-weight: 300;
+
+}
+.delete img{
+  width: 12px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  /* display: none; */
+}
+.delete.is-active{
+}
+.number{
+  font-family: "work sans";
+  font-size: 12px;
+  font-weight: 300;
+
+}
+h3.number{
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.table-two{
+  width: 100vw;
+  text-align: left;
+  background-color: var(--blue);
+  color:white;
+  min-height: 200px;
+}
+.table-two-td{
+  margin-top: 100px;
+}
+/* antalhånklder-side-end */
+
+table.table-two tr td:nth-child(1) {
+  width: 50%;
+  padding-right: 30px;;
+
+}
+
+table.table-two tr td:nth-child(2) {
+
+  padding-right: 16px;
+
+  
+ 
+}
+
+table.table-two tr td:nth-child(3) {
+  padding-right: 16px;
+
+
+}
+
+.submit-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 200px;
+
+    background-image: url("img/payingbackground.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% ;
+
+  
+}
+/* HAANDKLEADER PAGE END*/
+
+
+
+
+
+
+
+
+
+/* BETALING */
+
+.section-three{
+  
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color:white;
+  padding-top: 32px;
+  
+
+
+}
+
+.kode-form{
+  font-family: "work sans";
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  padding: 16px;
+  color:white;
+  width: 100vw;
+
+  
+}
+
+
+.kode-form input[type="text"]{
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  margin-top: 8px;
+}
+
+.kode-form input[type="number"]{
+  width: 100px;
+  padding: 8px;
+}
+
+.kode-form label{
+color:white;
+font-family: "Lora", serif;
+margin-top: 32px;
+font-size: 12px;
+
+}
+
+
+.no-code{
+  font-family: "work sans";
+  font-weight: 400;
+}
+.submit.three{
+  padding: 8px;
+  background-color: white;
+  margin: 8px;
+  color:var(--blue);
+    font-family: "Lora", serif;
+}
+
+.input-boxes-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.input-div{
+  
+  margin-bottom: 16px;
+
+}
+
+
+.input-div>input[type="text"]{
+  width: 99%;
+}
+
+.input-div>.kode-form input[type="text"]{
+  width: 100px;
+  padding: 8px;
+}
+.input-in-div{
+  width: 100px;
+  display: flex;
+}
+
+.back-btn{
+  text-decoration: none;
+  font-family: "work sans";
+  color:white;
+  background-color: var(--blue);
+  text-align: center;
+  font-size: 25px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  align-self: flex-start;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.back-btn p{
+  font-size: 12px;
+  
+}
+
+.add{
+  /* background-color: red; */
+  
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+      font-family: "Lora", serif;
+      margin-top: 32px;
+}
+
+.add-picture-div
+{
+background-image: url("img/nocodeadd.png");
+background-size: contain;
+width: 234px;
+height: 121px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  padding: 8px;
+  padding-right: 16px;
+  margin-top: 8px;
+
+}
+
+.add-picture-div .fa-solid{
+  text-decoration: none;
+    color:white;
+      font-size: 20px;
+
+
+  
+}
+
+/* BETALING END */
+
+
+
+
+
+
+
+
+/* BEKRÆFTET */
+
+.section-four{
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin-top: 8px;
+  margin-bottom: 98px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.progress-container.three{
+  padding-top: 150px;
+  position: relative;
+}
+.submit.four{
+  max-width: 300px;
+}
+h1.confirmed{
+  font-size: 32px;
+  font-size: 500;
+  margin-bottom: 8px;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 30%;
+  
+}
+h2.confirmed{
+    color: var(--blue);
+opacity: 80%;
+font-size: 24px;
+margin-bottom: 9px;
+
+}
+p.confirmed{
+    font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  color:var(--blue);
+  font-style: italic;
+  margin-bottom: 100px;
+
+}
+/* BEKRÆFTET END */
+
+
+
+.resultat-hatte.number{
+  color:white;
+}
+
+
+.aboutus.maps{
+  background-color: white;
+  color:var(--blue);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  justify-content: space-between;
+}
+.aboutus.maps article{
+  background-color: none;
+  width: 45%;
+}
+.aboutus.maps p{
+  color: var(--blue);
+}
+.map{
+  width: 100%;
+  height: 200px;
+  align-self: flex-end;
+
+}
+.adresse{
+font-family: "Work", sans-serif;
+font-size: 12px;
+align-self: flex-end;
+
+}
+
+.aboutus.maps h2{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:700px) {
+
+  #landing-page-section-two{
+    background-image: url("img/background-strokes.png");
+    background-size:30%;
+    background-repeat: no-repeat;
+    background-position: 70%;
+  }
+.info-box
+{
+  background-color: ;
+  width: 100%;
+width: 100%;
+height: 668px ;
+  background-image: url("img/landingpage-sectionone-background.png");
+  background-size: cover;
+padding: 64px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: bottom;
+  padding: 32px;
+  padding-bottom: 5%;
+}
+#bullet-list-landing-page{
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.booktidh2{
+  width: 60%;
+font-weight: 100;
+margin: 0;
+padding: 0;
+font-size: 52px;
+font-weight: 100;
+}
+.info-box ul {
+  font-size: 16px;
+
+}
+.info-box ul li{
+  margin-top: 16px;
+}
+.info-box ul li .fa-solid{
+  margin-top: 16px;
+  padding-right: 16px;
+}
+  .step {
+    counter-increment: stepNummerRoshni; /*aner ik hvorfor lortetikk eu*/
+    position: relative; /* For at absolut positionerede pseudo-elementer placeres i forhold til .step */
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+
+    flex-direction: column;
+    /* background-color: rgb(151, 151, 151); */
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    width:310px;
+    counter-increment: stepNummerRoshni; /*aner ik hvorfor lortetikk eu*/
+
+}
+  
+  /* CIRKEL FØR STEPPET */
+  .step::before {
+color:white;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px; /* Løfter cirklen op over boksen */
+    left: 50%;
+    transform: translateX(-50%); /* Centrerer horisontalt */
+    z-index: 1;
+    /*her centerer jeg counter nummer som jeg afspiller*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    content: counter(stepNummerRoshni); /*Den viser det counter-increment med navnet stepNummerRoshni */
+
+  }
+  
+  /* STREG FØR STEPPET */
+  .step::after {
+    content: "";
+    height: 2px;
+    width: 300px;
+    background-color:#D9D9D9;
+    position: absolute;
+    top: -15px; /*Læg mæke til at denne er halv så meget fra toppen som de blå, (fordi det skal være i midten)*/ 
+    left: -50%; /* Skubber linjen til venstre, så den forbinder med forrige step */
+    z-index: 0;
+
+  }
+  .step.active::before{
+    background-color: var(--blue)!important;
+
+  }
+  
+  
+  /* Fjern stregen fra første step */
+  .step:first-child::after {
+    display: none;
+  }
+  
+fieldset label:Hover {
+  /* font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  color: -bl;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(15, 255, 75, 0.39);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  flex-shrink: calc(10%); */
+  width: 70px;
+  height: 75px;
+  z-index: 1;
+  position: relative;
+}
+label:has(input:checked) {
+  border: 2px solid red;
+}
+
+
+
+
+
+/* items */
+
+#items{
+  gap: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+.item>.prices{
+padding: 8px;
+
+}
+.item h3{
+  color:white;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: lighter!important;
+  
+
+}
+.prices p{
+  font-size: 12px;
+}
+/* items end */
+
+
+.item{
+  width: 219px;
+  height: 432px;
+  padding:0;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  overflow: hidden;
+  
+}
+.item:hover{
+  background-color: red;
+  border: 10px solid var(--blue)s;
+   /* width: 220px;
+  height: 333px; */
+}
+.item>img
+{
+  width: 100%!important;
+  height: 100%!important;
+  border-radius: 5px;
+}
+
+.item>img:hover{
+   width: 220px;
+  height: 333px;
+}
+
+.item>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:absolute;
+  color:white;
+bottom:50%;
+}
+
+.item>.prices{
+padding: 8px;
+font-size: 1px;
+font-family: "Lora", serif;
+font-weight: 100;
+}
+.item h3{
+  color:white;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 100;
+  margin-bottom: 12px;
+  font-family: "Lora", serif;
+
+  
+
+}
+
+  .delete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border:none;
+    background-color: transparent;
+    font-family: "work sans";
+    font-weight: 300;
+    font-size: 12px;
+    color:white;
+
+  }
+  .delete p{
+    color:white;
+  }
+  .edit-number{
+    font-family: "work sans";
+    font-weight: 300;
+  
+  }
+  .delete img{
+    width: 16px;
+    margin-top: 8px;
+  }
+  .number{
+    font-family: "work sans";
+    font-size: 12px;
+    font-weight: 300;
+  
+  }
+  h3.number{
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .resultat.number{
+    font-weight: 300;
+    font-size: 16px;
+  }
+  #items-two{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap:1rem;
+padding: 1rem;
+padding-top: 32px;
+padding-bottom: 32px;
+}
+  
+  .table-two{
+    width: 100%;
+  }
+  
+  /* antalhånklder-side-end */
+  
+  table.table-two tr td:nth-child(1) {
+    width: 80%;
+  
+  }
+  
+  table.table-two tr td:nth-child(2) {
+    width: 100%;  
+    justify-content: center;
+    text-align: center;
+  
+    
+   
+  }
+
+  .resultat-handklaeder{
+    color:white;
+  }
+  .resultat-hatte{color:white;}
+  
+  table.table-two tr td:nth-child(3) {
+width: 100%;  
+  }
+  
+  .section-two-landingpage{
+  display: flex;
+  /* padding: 32px; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  /* background-color: blue; */
+  margin-top: 32px;
+  
+
+}
+.section-two-landingpage article{
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 20%;
+  font-family: 25px;
+  /* background-color: purple; */
+  width: 50%;
+   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bullet-list {
+  /* background-color: yellow; */
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bullet-list>ul{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bullet-list>ul li{
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+h2#medbring-selv{
+  font-size: 30px;
+}
+.back-btn{
+  margin: 0;
+  
+}
+
+
+
+/* BETALING */
+.section-three{
+  width: 80vw;
+  padding-top: 32px;
+}
+#kode-form{
+  width: 50vw;
+}
+#kode-form label{
+  font-size: 16px;
+}
+#kode-form input[type="text"]{
+  height: 50px;
+}
+.input-boxes-row{
+  justify-content: center;
+}
+
+.input-boxes-row div{
+  width: 100%;
+}
+#input-ind-div{
+  width: 300px;
+}
+.back-btn{
+  margin-left: 32px;
+}
+.add-picture-div{
+  width: 434px;
+  height: 221px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 32px;
+
+}
+h1.confirmed{
+  margin-top: 0;
+  padding-top: 0;
+  margin-top: 100px;
+  font-size: 50px;
+}
+h2.confirmed{
+  font-size: 32px;
+}
+p.confirmed{
+  font-size:20px;
+}
+
+
+
+
+.aboutus{
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  background-color: var(--blue);
+  color:white;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+}
+.aboutus p{
+  font-size: 12px;
+font-family: "Work", sans-serif;
+margin-top: 8px;
+}
+.aboutus article{
+  width: 25%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+#aboutus>article:last-child{
+  position: static;
+  display: flex;
+  background-color: 
+  justify-content: center;
+  align-items: center;
+  border:#4D4C4C;
+
+}
+.aboutus-img{
+  position: static;
+  right: none;
+  width: none;
+   width: 100%;
+   padding-left: 10%;
+
+}
+#aboutus p{
+  font-size:16px;
+  width: 80%;
+  font-weight: lighter;
+}
+
+/* sidste sektion landingpagr*/
+.aboutus.maps{
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  background-color: white;
+ 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+}
+.aboutus.maps article{
+  width: 25%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+#aboutusmaps p{
+  font-size:16px;
+  width: 80%;
+  font-weight: lighter;
+}
+#aboutusmaps h2{
+  font-size: 32px;
+}
+#map{
+  align-self: flex-end;
+  width: 80%;
+  height: 200px;
+}
+
+}
+
+
+
+
+
+
+

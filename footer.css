@@ -1,0 +1,71 @@
+.footer-landingpage {
+    width: 100%;
+    height: 350px;
+    background-color: #8C8C8C;
+    display: flex;
+    justify-content: center; /* Centrér indhold vandret */
+    align-items: center;
+    padding: 0 32px;
+}
+
+.footer-landingpage article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%; /* Holder indhold samlet og centreret */
+    min-width: 320px; /* til h -sikrer at den aldrig bliver for smal */
+    gap: 32px;
+}
+
+.footer-landingpage article section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.footer-landingpage h3 {
+    font-size: 30px;
+    font-family: "Lora", serif;
+    color: #FFF8EA;
+    margin-bottom: 8px;
+}
+
+.footer-landingpage a {
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFF8EA;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.footer-landingpage ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-landingpage img {
+    width: 80px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 699px) {
+    .footer-landingpage {
+        height: auto;
+        padding: 32px;
+    }
+
+    .footer-landingpage article {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-landingpage article section {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}

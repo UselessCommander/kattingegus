@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landingpage</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="landingpage-header">
+    <div class="container">
+      <a href="#"><img src="img/logoblueandbase.png" alt="Logo"></a>
+
+     <nav class="mobile-nav">
+  <ul class="nav-buttons">
+    <li><a href="#">Book saunagus</a></li>
+    <li><a href="#">Om os</a></li>
+    <li><a href="#">Kontakt os</a></li>
+  </ul>
+</nav>
+
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </div>
+  </header>
+
+  <main class="secondmain">
+    <div class="progress-container two">
+        <div class="step active">Book tid</div>
+        <div class="step active ">Håndklæde</div>
+        <div class="step active">Betaling</div>
+        <div class="step">Bekræftelse</div>
+      </div>
+  <section class="section-three">
+        <h1>Betaling</h1>
+
+        <form action="post" method="post" id="kode-form"class="kode-form">  
+                <label for="text">Har du en kode? Skriv dit klippekorts kode </label>          <!-- <label for="kortnavn">Navn på kort</label> -->
+
+          <input type="text" id="kode" name="kode" placeholder="Din kode">
+<label for="text">Ingen kode? Skriv kortnummer</label>          <!-- <label for="kortnavn">Navn på kort</label> -->
+          <input type="text" id="kortnavn" name="kortnavn" placeholder="Navn på kort" required>
+        
+          <input type="text" id="kortnummer" name="kortnummer" placeholder="Kortnummer" required>
+        
+          <div id="input-boxes-row"class="input-boxes-row">
+            <div id="input-div" class="input-div">
+              <input class="input-in-div" type="text" id="exp" name="exp" placeholder="MM/YY" required>
+            </div>
+            <div id="input-in-div"  class="input-div">
+              <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
+            </div>
+          </div>
+           <div class="add">
+          <p class="add-text">Ingen kode?
+Køb et 10-turs kort og få en kode og 10% rabat!</p>
+
+  <div class="add-picture-div">
+<a href="haandklade.html"><i class="fa-solid fa-chevron-right "></i></a>
+  </div>
+
+        </div>
+
+          <a href="confirmed.html" class="submit three" type="submit">Bekræft <i class="fa-solid fa-chevron-right "></i></a>
+        </form>
+     
+  </section>
+    
+  
+       
+     
+
+
+        
+
+      </div>
+    </form>
+
+    <a class="back-btn" href="javascript:history.back()">
+      <i class="fa-solid fa-chevron-left "> </i><p>Tilbage</p>
+    </a>
+  </main>
+  
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer-landingpage">
+    <article>
+      <section>
+        <img src="img/logoblueandbase.png" alt="Logo">
+      </section>
+      <section>
+        <h3>INFORMATIONER</h3>
+        <a href="mailto:info@kattingesaunagus.dk">info@kattingesaunagus.dk</a>
+        <a href="tel:+4512345678">+45 12 34 56 78</a>
+        <a href="https://www.instagram.com/kattinge.saunagus" target="_blank">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i> @kattinge.saunagus
+        </a>
+      </section>
+      <section>
+        <h3>LINKS</h3>
+        <ul>
+          <li><a href="#">Book saunagus</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="#">Kontakt os</a></li>
+        </ul>
+      </section>
+    </article>
+  </footer>
+
+  <script src="header.js"></script>
+  <script src="bookstepone.js"></script> 
+   <script src="items.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landingpage</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="landingpage-header">
+    <div class="container">
+      <a href="#"><img src="img/logoblueandbase.png" alt="Logo"></a>
+
+      <nav>
+        <ul>
+          <li><a href="#booktid">Book saunagus</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="#">Kontakt os</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <!-- MOBILE NAV -->
+  <!-- <nav class="mobile-nav">
+    <ul>
+      <li><a href="#">Book saunagus</a></li>
+      <li><a href="#">Om os</a></li>
+      <li><a href="#">Kontakt os</a></li>
+    </ul>
+  </nav> -->
+  <nav class="mobile-nav">
+  <ul class="nav-buttons">
+    <li><a href="#">Book saunagus</a></li>
+    <li><a href="#">Om os</a></li>
+    <li><a href="#">Kontakt os</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+  <!-- MAIN CONTENT -->
+<!-- MAIN CONTENT -->
+<main class="secondmain">
+    <div class="progress-container two">
+      <div class="step active">Book tid</div>
+      <div class="step active">Håndklæde</div>
+      <div class="step">Betaling</div>
+      <div class="step">Bekræftelse</div>
+    </div>
+  
+    <h2>HÅNDKLÆDER</h2>
+  
+   <form action="/haandklade.html" method="get">
+  <div id="items-two">
+    <div class="item-two">
+      <div class="custom-select-wrapper">
+        <select onchange="visValgtTekstOne()" id="minSelectOne" class="custom-select" name="hatte" required>
+          <option selected disabled>Antal saunagushatte</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <i class="fa-solid fa-chevron-down icon-right"></i>
+      </div>
+    </div>
+
+    <div class="item-two">
+      <div class="custom-select-wrapper">
+        <select onchange="visValgtTekstTwo()" id="minSelect" class="custom-select" name="handklaeder" required>
+          <option selected disabled>Antal håndklæder</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <i class="fa-solid fa-chevron-down icon-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <table class="table-two ">
+    <tr>
+      <td id="table-two-td" class="table-two-td">
+        <div class="resultat-hatte number"></div>
+        <h3 class="number">Saunagus-hatte</h3>
+        <p class="pris-hatte number"></p>
+      </td>
+      <td><button type="button" class="delete"><img src="img/editwhite.png" alt="">Rediger antal</button></td>
+      <td><button type="button" class="delete"><img src="img/trashwhite.png" alt="">Slet</button></td>
+    </tr>
+    <tr>
+      <td id="table-two-td" class="table-two-td">
+        <div class="resultat-handklaeder number"></div>
+        <h3 class="number">Håndklæder</h3>
+        <p class="pris-handklaeder number"></p>
+      </td>
+      <td><button type="button" class="delete"><img src="img/editwhite.png" alt="">Rediger antal</button></td>
+      <td><button type="button" class="delete"><img src="img/trashwhite.png" alt="">Slet</button></td>
+    </tr>
+  </table>
+
+  <div class="submit-wrapper">
+    <a href="betaling.html"class="submit" type="submit">
+      Gå til betaling
+      <i class="fa-solid fa-chevron-right"></i>
+    </a> <a class="back-btn" href="javascript:history.back()">
+      <i class="fa-solid fa-chevron-left "> </i><p>Tilbage</p>
+    </a>
+  </div>
+</form>
+
+
+   
+
+  </main>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer-landingpage">
+    <article>
+      <section>
+        <img src="img/logoblueandbase.png" alt="Logo">
+      </section>
+      <section>
+        <h3>INFORMATIONER</h3>
+        <a href="mailto:info@kattingesaunagus.dk">info@kattingesaunagus.dk</a>
+        <a href="tel:+4512345678">+45 12 34 56 78</a>
+        <a href="https://www.instagram.com/kattinge.saunagus" target="_blank">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i> @kattinge.saunagus
+        </a>
+      </section>
+      <section>
+        <h3>LINKS</h3>
+        <ul>
+          <li><a href="#">Book saunagus</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="#">Kontakt os</a></li>
+        </ul>
+      </section>
+    </article>
+  </footer>
+
+  <script src="header.js"></script>
+  <script src="bookstepone.js"></script> 
+   <script src="items.js"></script>
+   <script src="selected.js"></script>
+   
+
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+  --blue: #153242;
+  --base: #EAE4D7;
+  --minegray: rgba(21, 50, 66, 0.5); /* #153242 med 50% opacity */
+}
+
+
+
+p{
+        font-family: "Work", sans-serif;
+}
+
+
+
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    opacity: 50%;
+}
+h1{
+
+    font-family: "Lora", serif;
+    font-size: 50px;
+    text-transform: uppercase!important;
+    font-weight: 100;
+
+
+}
+h2{
+
+    font-family: "Lora", serif;
+    font-weight: 100;
+    
+
+}
+header a {
+
+
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+    color:white;
+    
+
+
+}
+.h1one{
+
+    width: 70%;
+    padding-left: 16px;
+    margin-top: 80%;
+
+}
+
+.bullet-list-landing-page{
+
+
+    font-family: "work sans";
+    font-size: 16px;
+    color:white;
+    padding-left: 12px;
+    margin-top: 8px;
+    display: flex;
+    width: 100%;
+    text-align: left;
+
+
+}
+.bullet-list-landing-page>li{
+
+
+display: flex;
+margin-left: 8px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: left;
+font-size: 10px;
+
+
+}
+.bullet-list-landing-page>li .fa-solid{
+    margin-right: 8px;
+}
+
+.landingpage-button{
+
+
+    color:var(--blue);
+    background-color: white;
+    border: none;
+    margin-left: 16px;
+    margin-top: 8px;
+    width: 200px;  
+    font-size: 12px;  
+    font-family: "lora";
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    margin-bottom: 64px;
+
+}
+
+.video-div{
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+    height: 500px;
+/* align-items: center;
+text-align: center; */
+}
+    
+
+.bg-video {
+
+    position: absolute;
+    top: -100x;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    height: 600px;
+
+  }
+
+.landingpage-header{
+    /* background: blue; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    text-align: center;
+    background: transparent;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+
+}
+.landingpage-header img{
+    width: 32px;
+
+
+}
+.container{
+    display: flex;
+    /* background-color: gray; */
+    width: 100%;
+    list-style-type: none;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    justify-content: space-between;
+}
+.container nav{
+    display: flex;
+   list-style-type: none;
+   width: 50%;
+
+   /* background-color: red; */
+
+}
+.container nav ul {
+    width: 100%;
+    /* background-color: pink; */
+    display: none;
+
+
+
+}
+.hamburger
+{
+    display: block;/**/
+    width: 35px; /*længden på stregen*/
+height: 35px; /*højden eller størrelsen på ikonet*/
+cursor: pointer; /**/
+
+appearance: none;
+background: none;
+outline: none;
+border: none;
+z-index: 99!important;
+position: fixed;
+right: 32px;
+
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color:var(--blue);
+    margin: 6px 0px;
+    transition:0.4s;
+    z-index: 9999;
+}
+
+/*den øverste pseudo-element(altså den øverste hvide streg*/
+.hamburger.is-active:before{
+
+    transform: rotate(-45deg); translate: (-8px, 6px);
+    background-color: white;
+    z-index: 9999;
+
+}
+/*når min knap er aktiv slettes den miderste bjælke. Altså den bjælke som ikke er pseudo-elementet*/
+.hamburger.is-active:after{
+
+    transform:rotate(45deg) translate(-16px, -14px);
+    background-color: white;
+
+}
+
+
+
+.hamburger.is-active .bar{
+    
+    opacity: 0;
+}
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #0d2f3f; /* mørk blå */
+  background-image: url("img/background-strokes-big.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+/* Knapcontainer */
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Knapper */
+.nav-buttons li a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #0d2f3f;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  background-image: url("img/background-strokes-big.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  border: none;
+}
+
+
+
+/* LOGOER */
+.bluelogo {
+  display: flex;
+}
+
+.bluelogo.is-active {
+  display: none;
+}
+
+.whitelogo {
+  display: none;
+}
+
+.whitelogo.is-active {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ipad screnn */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mobile-screen*/
+
+
+@media (min-width:700px) {
+    
+    .hamburger{
+        display: none;
+    }
+    
+    .container nav ul {
+
+
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        color:white;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        list-style-type: none;
+    
+    
+    }
+    
+.bluelogo{
+  
+        width: 32px;
+
+}
+
+    .h1one{
+
+        width: 40%;
+        padding-left: px;
+        margin-top: 30%;
+
+    }
+    
+   
+    
+    .landingpage-button:hover{
+
+        opacity: 50%;
+    }
+    
+
+
+h2{
+
+
+    font-family: "Lora", serif;
+    font-size: 40px;
+    
+
+}
+.video.div{
+
+    height: 800px;
+}
+.bg-video{
+
+    height: 800px;
+
+
+}
+#video-div{
+    padding: 34px;
+}
+/* animation */
+#video-div ul, .h1one, .landingpage-button{
+    /* color:red;
+    background-color: red; */
+    
+}
+
+#info-box{
+
+    margin-top: 150px;
+}
+.container nav ul{
+    background-color: lue;
+}
+.container nav ul:hover{
+    opacity: 
+    50%;
+}
+.bullet-list-landing-page li{
+    font-size: 16px;
+    padding-left: 0px;
+}
+.landingpage-button{
+    margin-left: 16px;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+
+}
+#landingpage-button:hover{
+    background-color: blue;
+}
+
+}
