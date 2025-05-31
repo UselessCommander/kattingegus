@@ -1187,22 +1187,6 @@ align-self: flex-end;
   background: black;
 }
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.7);
-  clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.play-button:hover {
-  opacity: 1;
-}
 
 .team {
   padding: 2rem 1rem;
@@ -1354,15 +1338,6 @@ align-self: flex-end;
   background-color: var(--blue);
   transform: translateY(-1px);
 }
-
-
-
-
-
-
-
-
-
 
 
 
