@@ -1182,7 +1182,7 @@ align-self: flex-end;
   width: 100%;
   border-radius: 8px;
   display: block;
-  aspect-ratio: 16 / 9; /* Giver ens højde på tværs af enheder */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: black;
 }
