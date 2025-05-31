@@ -35,3 +35,19 @@ function visValgtTekstTwo() {
 function displayChoosentime(){
     const time = querySelectorAll('.')
 }
+
+
+// Saunagushatte – Slet
+document.querySelector('.delete-hat').addEventListener('click', () => {
+  document.querySelector('.resultat-hatte').innerText = "";
+  document.querySelector('.pris-hatte').innerText = "";
+  document.getElementById('minSelectOne').selectedIndex = 0; // reset dropdown
+});
+
+// Håndklæder – Slet
+document.querySelector('.delete-towel').addEventListener('click', () => {
+  document.querySelector('.resultat-handklaeder').innerText = "";
+  document.querySelector('.pris-handklaeder').innerText = "";
+  document.getElementById('minSelect').selectedIndex = 0;
+});
+
