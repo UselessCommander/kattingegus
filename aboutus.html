@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Os – Gus Kattinge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <script defer src="header.js"></script>
+</head>
+<body>
+    <header class="landingpage-header">
+      <div class="container">
+        <a class="logo-link" href="index.html">
+          <img id="logo-img" src="img/darkbluelogo.png" alt="Logo">
+        </a>
+
+
+          <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
+
+        <nav class="mobile-nav">
+          <div class="nav-pattern-overlay"></div>
+          <ul>
+            <li><a href="/index.html#booktid">Book saunagus</a></li>
+            <li><a href="/aboutus.html">Om os</a></li>
+            <li><a href="/aboutus.html#kontakt">Kontakt os</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+  <main>
+
+    <section class="hero">
+      <h1 class="hero-title">OM OS</h1>
+    </section>
+
+    
+    <section class="intro">
+      <h2>Vi bygger det fra jorden af</h2>
+      <p>
+        Kattinge Saunagus er bygget helt fra bunden af af ildsjæle med en passion for natur og velvære.
+        Her får du saunagus under åben himmel, hvor det enkle møder det sanselige –
+        midt i den smukke, danske natur.
+      </p>
+    <div class="video-wrapper">
+      <video class="intro-video"
+      src="/video/C0001.mp4" 
+      controls 
+      poster="img/video-thumbnail.jpg"
+      playsinline
+      preload="metadata">
+    </video>
+    </div>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Mød teamet bagved Kattinge Saunagus</h2>
+      <div class="team-grid">
+        <div class="team-member placeholder">
+          <img src="img/placeholder.svg" alt="Team medlem" />
+        </div>
+        <div class="team-member billedblok">
+          <div class="billede">BILLEDE ER PÅ VEJ</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <h2>Kerneværdier</h2>
+      <ul class="values-grid">
+        <li>Antidigital tilgang</li>
+        <li>Tilbage til naturen</li>
+        <li>En analog følelse</li>
+        <li>Kvalitet og velvære</li>
+      </ul>
+    </section>
+
+        <section class="kontakt-sauna" id="kontakt">
+      <h2>Kontakt os</h2>
+      <form class="kontakt-form" action="#" method="post">
+        <label for="navn">Navn</label>
+        <input type="text" id="navn" name="navn" placeholder="Dit navn" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="din@email.dk" required>
+
+        <label for="besked">Besked</label>
+        <textarea id="besked" name="besked" rows="5" placeholder="Hvad vil du gerne spørge om?"></textarea>
+
+        <button type="submit">Send besked</button>
+      </form>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="/index.html" class="main-nav-button">FORSIDE</a>
+      <button class="back-button">❮</button>
+    </div>
+
+
+  </main>
+
+  <script>
+    const video = document.querySelector(".intro-video");
+    const playButton = document.querySelector(".play-button");
+
+    playButton.addEventListener("click", () => {
+      video.play();
+      playButton.style.display = "none";
+    });
+
+  </script>
+</body>
+</html>

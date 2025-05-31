@@ -11,54 +11,40 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
   <!-- CSS -->
+   
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="style.css">
   
+  
 
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="landingpage-header">
-    <div class="container">
-      <a class="bluelogo" href="index.html"><img src="img/darkbluelogo.png" alt="Logo"></a>
-            <a class="whitelogo" href="index.html"><img src="img/whitelogo.png" alt="Logo"></a>
-
+    <header class="landingpage-header">
+      <div class="container">
+        <a class="logo-link" href="index.html">
+          <img id="logo-img" src="img/darkbluelogo.png" alt="Logo">
+        </a>
 
 
-      <nav>
-        <ul>
-          <li><a href="#booktid">Book saunagus</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt os</a></li>
-        </ul>
-      </nav>
+          <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
 
-      <button class="hamburger">
-        <div class="bar"></div>
-      </button>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-
-  <!-- MOBILE NAV -->
-  <nav class="mobile-nav">
-  <ul class="nav-buttons">
-    <li><a href="#">Book saunagus</a></li>
-    <li><a href="#">Om os</a></li>
-    <li><a href="#">Kontakt os</a></li>
-  </ul>
-</nav>
+        <nav class="mobile-nav">
+          <div class="nav-pattern-overlay"></div>
+          <ul>
+            <li><a href="/index.html#booktid">Book saunagus</a></li>
+            <li><a href="/aboutus.html">Om os</a></li>
+            <li><a href="/aboutus.html#kontakt">Kontakt os</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
 
 
@@ -72,22 +58,40 @@
 
   <!-- MAIN CONTENT -->
   <main class="firstmain">
-    <div id="video-div" class="video-div">
-    <video id="video" class="bg-video" muted loop playsinline poster="img/realbackgorund.png">
-  <source src="video/forstevideo.mp4" type="video/mp4">
-  Din browser understøtter ikke video-tagget.
-</video>
+<section class="landingpage-hero" >
+  <video 
+    class="bg-video" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    poster="img/realbackgorund.png">
+    <source src="video/forstevideo.mp4" type="video/mp4">
+    Din browser understøtter ikke video-tagget.
+  </video>
+
+  <div class="hero-content">
+    <h1>
+      <span>KATTINGE</span>
+      <span>SAUNAGUS</span>
+    </h1>
+
+    <ul class="bullet-list-landing-page">
+      <ul class="bullet-list-landing-page" data-aos="fade-up">
+        <li><i class="fa-solid fa-check"></i><p>Finsk levandør</p></li>
+        <li><i class="fa-solid fa-check"></i><p>Sø udsigt</p></li>
+        <li><i class="fa-solid fa-check"></i><p>20 min fra Roskilde</p></li>
+      </ul>
+
+    </ul>
+
+    <a href="#booktid"><button class="landingpage-button">BOOK TID</button></a>
+  </div>
+</section>
 
 
-      <img class="h1one" src="img/whiteheader.png" alt="">
-     <ul id="bullet-list-landing-page"class="bullet-list-landing-page">
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i> <p>Finsk levandør</p></li>
-       <li><i class="fa-solid fa-check" aria-hidden="true"></i> <p>Sø udsigt</p></li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> <p>20 min fra Roskilde </p></li>
-     </ul>
 
-      <a href="#"><button id="landingpage-button" class="landingpage-button">BOOK TID</button> </a>
-    </div>
+
 
     <section  class="landingpage-section-one ">
       <div id="info-box"class="info-box">
@@ -101,7 +105,7 @@
 
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Udlejning af håndklæder</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Finsk levandør</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Økologiske olier</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Økologiske olier</li>
 
 
 
@@ -195,7 +199,7 @@ Lejer du ikke skal du selv medbringe</p>
   <!-- <fieldset grupperer inputfelter som har noget med hinanden at gøre. det mere overskugeligt -->
     <fieldset class="">
       <table class="choose-time">
-  <tr class="dates">
+      <tr class="dates">
           <td>10/05</td>
           <td>11/05</td>
           <td>12/05</td>
@@ -211,43 +215,26 @@ Lejer du ikke skal du selv medbringe</p>
           <td>Fre</td>
         </tr>
         <tr>
-          <td><label class="taken"><input type="radio" name="tid" value="man_10"> kl. 10:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_1">  kl 12:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_15_2">  kl 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_15_2">  kl 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_15_2">  kl 15:00</label></td>
-          
-
-
-
-        </tr>
-        <tr>
-          <td><label><input type="radio" name="tid" value="man_10"> kl. 10:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_1">  kl. 12:00</label></td>
-          <td><label class="taken"><input type="radio" name="tid" value="tirs_12_2">  kl. 15:00</label></td>
-          <td><label class="taken"><input type="radio" name="tid" value="tirs_12_2">kl. 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">  kl. 15:00</label></td>
-
-
-        </tr>
-        <tr>
-          <td><label class="taken"><input type="radio" name="tid" value="man_10"> kl. 10:00</label></td>
-          <td><label class="taken"><input type="radio" name="tid" value="tirs_12_1"> kl. 12:00</label></td>
-          <td><label ><input type="radio" name="tid" value="tirs_12_2">kl. 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">kl. 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">  kl. 15:00</label></td>
-
-
-        </tr>
-        <tr>
-          <td><label><input type="radio" name="tid" value="man_10"> kl. 10:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_1"> kl. 12:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">kl. 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">kl. 15:00</label></td>
-          <td><label><input type="radio" name="tid" value="tirs_12_2">  kl. 15:00</label></td>
-
-
-        </tr>
+    <td><label><input type="radio" name="tid" value="man_10"> kl. 10:00</label></td>
+    <td><label><input type="radio" name="tid" value="tirs_10"> kl. 10:00</label></td>
+    <td><label><input type="radio" name="tid" value="ons_10"> kl. 10:00</label></td>
+    <td><label><input type="radio" name="tid" value="tors_10"> kl. 10:00</label></td>
+    <td><label><input type="radio" name="tid" value="fre_10"> kl. 10:00</label></td>
+  </tr>
+  <tr>
+    <td><label><input type="radio" name="tid" value="man_12"> kl. 12:00</label></td>
+    <td><label><input type="radio" name="tid" value="tirs_12"> kl. 12:00</label></td>
+    <td><label><input type="radio" name="tid" value="ons_12"> kl. 12:00</label></td>
+    <td><label><input type="radio" name="tid" value="tors_12"> kl. 12:00</label></td>
+    <td><label><input type="radio" name="tid" value="fre_12"> kl. 12:00</label></td>
+  </tr>
+  <tr>
+    <td><label><input type="radio" name="tid" value="man_15"> kl. 15:00</label></td>
+    <td><label><input type="radio" name="tid" value="tirs_15"> kl. 15:00</label></td>
+    <td><label><input type="radio" name="tid" value="ons_15"> kl. 15:00</label></td>
+    <td><label><input type="radio" name="tid" value="tors_15"> kl. 15:00</label></td>
+    <td><label><input type="radio" name="tid" value="fre_15"> kl. 15:00</label></td>
+  </tr>
       
       </table>
     </fieldset>
@@ -322,7 +309,7 @@ Kun 20 min. fra Roskildet. Klik og planlæg din cykeltur!
   <footer class="footer-landingpage">
     <article>
       <section>
-        <img src="img/logoblueandbase.png" alt="Logo">
+        <img src="img/darkbluelogo.png" alt="Logo">
       </section>
       <section>
         <h3>INFORMATIONER</h3>
@@ -335,55 +322,36 @@ Kun 20 min. fra Roskildet. Klik og planlæg din cykeltur!
       <section>
         <h3>LINKS</h3>
         <ul>
-          <li><a href="#">Book saunagus</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt os</a></li>
+          <li><a href="/index.html#booktid">Book saunagus</a></li>
+          <li><a href="/aboutus.html">Om os</a></li>
+          <li><a href="/aboutus.html#kontakt">Kontakt os</a></li>
         </ul>
       </section>
     </article>
   </footer>
 
-  <script src="header.js"></script>
+<script src="header.js"></script>
 <script src="bookstepone.js"></script>
 <script src="items.js"></script>
+<script src="maps.js"></script>
 
-<!-- Video script -->
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  const video = document.getElementById("video");
-
-  video.addEventListener("loadedmetadata", () => {
-    if (video.duration > 23) {
-      video.currentTime = 23;
-    }
-
-    video.play().catch(err => {
-      console.warn("Kan ikke afspille video automatisk:", err);
-    });
+  AOS.init({
+    duration: 800, // millisekunder
+    once: true     // animation kun én gang
   });
 </script>
 
 <!-- initMap funktionen -->
-<script>
-  function initMap() {
-    const location = { lat: 55.6354, lng: 12.0702 };
-
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
-      center: location,
-    });
-
-    new google.maps.Marker({
-      position: location,
-      map: map,
-      title: "Kongemarksvej 74, 4000 Roskilde"
-    });
-  }
-</script>
-
-<!-- Google Maps API med callback -->
 <script async
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH4WM374RzE9nTEvqpbkRPwHEEU1aTCAg&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH4WM374RzE9nTEvqpbkRPwHEEU1aTCAg">
 </script>
+
+
+
+
 
 
 

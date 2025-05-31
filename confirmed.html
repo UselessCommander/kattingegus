@@ -19,23 +19,29 @@
 <body>
 
   <!-- HEADER -->
-  <header class="landingpage-header">
-    <div class="container">
-      <a href="#"><img src="img/darkbluelogo.png" alt="Logo"></a>
+    <header class="landingpage-header">
+      <div class="container">
+        <a class="logo-link" href="index.html">
+          <img id="logo-img" src="img/darkbluelogo.png" alt="Logo">
+        </a>
 
-      <nav>
-        <ul>
-          <li><a href="#">Book saunagus</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt os</a></li>
-        </ul>
-      </nav>
 
-      <button class="hamburger">
-        <div class="bar"></div>
-      </button>
-    </div>
-  </header>
+          <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
+
+        <nav class="mobile-nav">
+          <div class="nav-pattern-overlay"></div>
+          <ul>
+            <li><a href="/index.html#booktid">Book saunagus</a></li>
+            <li><a href="/aboutus.html">Om os</a></li>
+            <li><a href="/aboutus.html#kontakt">Kontakt os</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
 
 
@@ -107,7 +113,7 @@ Vis koden til x-person når du ankommer til saunagus</p>
   <footer class="footer-landingpage">
     <article>
       <section>
-        <img src="img/logoblueandbase.png" alt="Logo">
+        <img src="img/darkbluelogo.png" alt="Logo">
       </section>
       <section>
         <h3>INFORMATIONER</h3>
@@ -120,9 +126,9 @@ Vis koden til x-person når du ankommer til saunagus</p>
       <section>
         <h3>LINKS</h3>
         <ul>
-          <li><a href="#">Book saunagus</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt os</a></li>
+          <li><a href="/index.html#booktid">Book saunagus</a></li>
+          <li><a href="/aboutus.html">Om os</a></li>
+          <li><a href="/aboutus.html#kontakt">Kontakt os</a></li>
         </ul>
       </section>
     </article>

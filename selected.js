@@ -32,6 +32,6 @@ function visValgtTekstTwo() {
     prisFeltTowel.innerText = "";
   }
 }
-function displayChoosentime{
+function displayChoosentime(){
     const time = querySelectorAll('.')
 }

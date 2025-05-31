@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 :root {
   --blue: #153242;
   --base: #EAE4D7;
@@ -13,6 +11,15 @@
 }
 
 
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+html {
+  scroll-padding-top: 100px; /* eller headerens højde */
+}
 
 p{
         font-family: "Work", sans-serif;
@@ -53,424 +60,193 @@ header a {
 
 
 }
-.h1one{
 
-    width: 70%;
-    padding-left: 16px;
-    margin-top: 80%;
 
+
+.landingpage-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 1rem 1.5rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.bullet-list-landing-page{
 
-
-    font-family: "work sans";
-    font-size: 16px;
-    color:white;
-    padding-left: 12px;
-    margin-top: 8px;
-    display: flex;
+.container {
     width: 100%;
-    text-align: left;
-
-
-}
-.bullet-list-landing-page>li{
-
-
-display: flex;
-margin-left: 8px;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-text-align: left;
-font-size: 10px;
-
-
-}
-.bullet-list-landing-page>li .fa-solid{
-    margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.landingpage-button{
-
-
-    color:var(--blue);
-    background-color: white;
-    border: none;
-    margin-left: 16px;
-    margin-top: 8px;
-    width: 200px;  
-    font-size: 12px;  
-    font-family: "lora";
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 5px;
-    margin-bottom: 64px;
-
-}
-
-.video-div{
-
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: -1;
-    height: 500px;
-/* align-items: center;
-text-align: center; */
-}
-    
-
-.bg-video {
-
-    position: absolute;
-    top: -100x;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    height: 600px;
-
-  }
-
-.landingpage-header{
-    /* background: blue; */
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    text-align: center;
-    background: transparent;
-    align-items: center;
-    position: fixed;
-    z-index: 99;
-
-}
 .landingpage-header img{
     width: 32px;
 
 
 }
-.container{
-    display: flex;
-    /* background-color: gray; */
-    width: 100%;
-    list-style-type: none;
-    align-items: center;
-    padding-left: 32px;
-    padding-right: 32px;
-    justify-content: space-between;
-}
-.container nav{
-    display: flex;
-   list-style-type: none;
-   width: 50%;
 
-   /* background-color: red; */
-
-}
-.container nav ul {
-    width: 100%;
-    /* background-color: pink; */
-    display: none;
-
-
-
-}
-.hamburger
-{
-    display: block;/**/
-    width: 35px; /*længden på stregen*/
-height: 35px; /*højden eller størrelsen på ikonet*/
-cursor: pointer; /**/
-
-appearance: none;
-background: none;
-outline: none;
-border: none;
-z-index: 99!important;
-position: fixed;
-right: 32px;
-
-}
-
-.hamburger .bar, .hamburger:after, .hamburger:before{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color:var(--blue);
-    margin: 6px 0px;
-    transition:0.4s;
-    z-index: 9999;
-}
-
-/*den øverste pseudo-element(altså den øverste hvide streg*/
-.hamburger.is-active:before{
-
-    transform: rotate(-45deg); translate: (-8px, 6px);
-    background-color: white;
-    z-index: 9999;
-
-}
-/*når min knap er aktiv slettes den miderste bjælke. Altså den bjælke som ikke er pseudo-elementet*/
-.hamburger.is-active:after{
-
-    transform:rotate(45deg) translate(-16px, -14px);
-    background-color: white;
-
+.logo-link {
+  z-index: 1002;
+  position: relative;
 }
 
 
-
-.hamburger.is-active .bar{
-    
-    opacity: 0;
-}
-.mobile-nav {
+nav.mobile-nav {
   position: fixed;
   top: 0;
-  left: 100%;
+  right: -100%;
   width: 100%;
   height: 100vh;
-  background-color: #0d2f3f; /* mørk blå */
-  background-image: url("img/background-strokes-big.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: 0.5s;
-  z-index: 2;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-nav.is-active {
-  left: 0;
-}
-
-/* Knapcontainer */
-.nav-buttons {
-  list-style: none;
+  background: var(--blue);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 80%;
-  max-width: 400px;
-  padding: 0;
-  margin: 0;
-  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
-/* Knapper */
-.nav-buttons li a {
-  display: block;
-  padding: 1rem;
-  font-size: 1.2rem;
-  color: #0d2f3f;
-  text-decoration: none;
-  text-align: center;
-  background-color: white;
-  background-image: url("img/background-strokes-big.png");
-  background-repeat: no-repeat;
+.nav-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/hamburgerbackground.png"); 
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+
+nav.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  width: 100%;
+}
+
+
+
+
+
+nav.mobile-nav a {
+  display: inline-block;
+  background-color: white;
+  color: #153242;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  min-width: 240px; /* <- Ens bredde */
+  text-align: center;
+}
+
+
+
+nav.mobile-nav a {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.hamburger {
+  background: none;
   border: none;
-}
-
-
-
-/* LOGOER */
-.bluelogo {
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.5rem;
+  z-index: 1002;
+  transition: transform 0.3s ease;
 }
 
-.bluelogo.is-active {
-  display: none;
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #153242;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.whitelogo {
-  display: none;
+.hamburger.active div:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+
 }
 
-.whitelogo.is-active {
-  display: flex;
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Ipad screnn */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Mobile-screen*/
-
-
-@media (min-width:700px) {
-    
-    .hamburger{
-        display: none;
-    }
-    
-    .container nav ul {
-
-
-        width: 100%;
-        display: flex;
-        list-style-type: none;
-        color:white;
-        justify-content: space-evenly;
-        align-items: flex-end;
-        list-style-type: none;
-    
-    
-    }
-    
-.bluelogo{
+nav.mobile-nav.show {
+  right: 0;
   
-        width: 32px;
-
 }
 
-    .h1one{
-
-        width: 40%;
-        padding-left: px;
-        margin-top: 30%;
-
-    }
-    
-   
-    
-    .landingpage-button:hover{
-
-        opacity: 50%;
-    }
-    
-
-
-h2{
-
-
-    font-family: "Lora", serif;
-    font-size: 40px;
-    
-
-}
-.video.div{
-
-    height: 800px;
-}
-.bg-video{
-
-    height: 800px;
-
-
-}
-#video-div{
-    padding: 34px;
-}
-/* animation */
-#video-div ul, .h1one, .landingpage-button{
-    /* color:red;
-    background-color: red; */
-    
+.hamburger.active .bar {
+  background-color: white;
 }
 
-#info-box{
+@media (min-width: 700px) {
+  .hamburger {
+    display: none;
+  }
 
-    margin-top: 150px;
-}
-.container nav ul{
-    background-color: lue;
-}
-.container nav ul:hover{
-    opacity: 
-    50%;
-}
-.bullet-list-landing-page li{
-    font-size: 16px;
-    padding-left: 0px;
-}
-.landingpage-button{
-    margin-left: 16px;
-    height: 50px;
-    width: 300px;
-    font-size: 20px;
+  .landingpage-header {
+    display: flex;
+    align-items: center;
+    padding: 0px 32px;
+  }
 
-}
-#landingpage-button:hover{
-    background-color: blue;
+.container {
+    align-self: center;
+    width: 100vw;
 }
 
+
+
+  nav.mobile-nav {
+    position: static;
+    background: transparent;
+    height: auto;
+    display: flex;
+    width: auto;
+  }
+
+  nav.mobile-nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  nav.mobile-nav a {
+    background: none;
+    color: white;
+    padding: 0;
+    font-size: 1rem; 
+    font-family: 'Work Sans', sans-serif; 
+    font-weight: bold;
+  }
+
+  .nav-pattern-overlay {
+    display: none;
+  }
 }
+
+
