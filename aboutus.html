@@ -4,12 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Om Os – Gus Kattinge</title>
-  <link rel="stylesheet" href="style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Work+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="header.css">
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
   <script defer src="header.js"></script>
+
 </head>
 <body>
     <header class="landingpage-header">
@@ -39,12 +51,12 @@
 
   <main>
 
-    <section class="hero">
+    <section class="hero" data-aos="fade-up">
       <h1 class="hero-title">OM OS</h1>
     </section>
 
     
-    <section class="intro">
+    <section class="intro" data-aos="fade-up">
       <h2>Vi bygger det fra jorden af</h2>
       <p>
         Kattinge Saunagus er bygget helt fra bunden af af ildsjæle med en passion for natur og velvære.
@@ -63,7 +75,7 @@
       </div>
     </section>
 
-    <section class="team">
+    <section class="team" data-aos="fade-up">
       <h2>Mød teamet bagved Kattinge Saunagus</h2>
       <div class="team-grid">
         <div class="team-member placeholder">
@@ -75,7 +87,8 @@
       </div>
     </section>
 
-    <section class="values">
+    
+  <section class="values" data-aos="fade-up">
       <h2>Kerneværdier</h2>
       <ul class="values-grid">
         <li>Antidigital tilgang</li>
@@ -85,7 +98,7 @@
       </ul>
     </section>
 
-        <section class="kontakt-sauna" id="kontakt">
+        <section class="kontakt-sauna" id="kontakt" data-aos="fade-up">
       <h2>Kontakt os</h2>
       <form class="kontakt-form" action="#" method="post">
         <label for="navn">Navn</label>
@@ -108,16 +121,5 @@
 
 
   </main>
-
-  <script>
-    const video = document.querySelector(".intro-video");
-    const playButton = document.querySelector(".play-button");
-
-    playButton.addEventListener("click", () => {
-      video.play();
-      playButton.style.display = "none";
-    });
-
-  </script>
 </body>
 </html>
