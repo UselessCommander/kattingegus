@@ -1214,7 +1214,7 @@ align-self: flex-end;
 }
 
 .billedblok {
-  background-color: #153242;
+  background-color: var(--blue);
   color: white;
   font-size: 0.85rem;
 
